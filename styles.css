@@ -1,110 +1,327 @@
-/* Dashboard Overview */
-.dashboard {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ background-color:#F8F1E4;
+}
+
+header {
+    background: #4A4A4A;
+    color: rgb(243, 243, 243);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Button {
+    background-color:#E67E22;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    border-color: #6fb8e2;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background: #D35400;
+}
+
+
+footer {
+    background: #4A4A4A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vision img {
+    height: 100px;
+    width: 180px;
+    margin-bottom: 10px;
+ flex-direction: column;
+    align-items: right;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+ 
+ 
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+
+} 
+
+
+a{
+text-decoration: none;
+}
+.back-arrow:hover {
+    color: gray;
+}
+.breadcrumbs{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+ background-color:#ddd;
+}
+logo {
+    display: flex;
+
+    align-items: center
+}
+
+.logo img {
+
+    width: 20px;
+
+    height: 50px;
+}
+
+nav ul li a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
+
+
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
     padding: 20px;
 }
 
-h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
 
-.overview-cards-sana {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    padding: 5px 10px;
-}
-
-.card-sana {
-   background-color: white;
+.activities-sidebarj {
+    width: 25%;
+    background: wait;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 350px;
-	text-align: center
+	  overflow-y: auto;
+	    max-height: 500px;
 }
 
-/* Scrollable List */
-.scrollable-list-sana {
-    max-height: 120px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
+#activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; 
+}
+
+/* تصميم الكارد */
+.activity-card {
+	 display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(22.33% - 15px); 
+    min-width: 250px; 
+    background: white;
+    border: 2px solid wait;
     padding: 10px;
-    background: #fff;
-}
-
-.scrollable-list-sana ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.scrollable-list-sana ul li {
-    margin-bottom: 5px;
-}
-
-/* Registered Children */
-.registered-children {
- background-color: white;
-    padding: 15px;
     border-radius: 8px;
-	margin: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+	  margin-bottom: 10px;
+	   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.registered-children ul {
-    padding-left: 20px;
+
+
+
+
+.activity-card-img {
+    width: 85%;
+    max-height: 150px; 
+    object-fit: cover; 
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px; 
+}
+.activity-image-large {
+    width: 85%; 
+    max-height: 150px; 
+    object-fit: cover; 
+    display: block;
+    margin: 10px auto; 
+    border-radius: 10px; 
 }
 
-.registered-children ul {
-    font-weight: bold;
-}
-
-.registered-children ul li ul {
-    padding-left: 15px;
-    font-weight: normal;
-}
-
-/* Activities Section */
-.activities {
-  background-color: white;
-    padding: 15px;
-	margin: 20px;
+.activity-details {
+    width: 70%;
+    background: white;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.view-details-button:hover {
+    background-color:darkseagreen;
 }
 
-
-.activity-box-admin {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    background: #f9f9f9;
-}
-
-.activity-box-admin dl {
-    margin: 0;
-}
-
-.activity-box-admin dt {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.activity-box-admin dd {
-    margin: 5px 0 0 15px;
-}
-
-.coach-header {
+.info-boxes {
     display: flex;
-    justify-content: space-between;
-    align-items: center;  
-    padding: 5px 10px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.schedule-link {
+.info {
+    background:  #4A4A4A;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+	 min-width: 150px;
+	  flex: 1;
+	  margin: 5px;
+}
+.view-button, .join-button {
+background: #4A4A44;
+text-decoration: none;
+color: white; 
+border-radius: 10px;
+ border-color: #FF6B6B;
+ padding: 10px; 
+ cursor: pointer;
+}
+
+.join-button {
+   display: flex;
+    justify-content: center;
+	  color: white;
+    background:  #4A4A4A;
+    border: none;
+    cursor: pointer;
+	 margin-top:20px;
+	    width: 100%;
+		align-items: center;
+    padding: 20px;
+    border-radius: 80px;
+	 text-decoration:center;
+}
+.payment-section {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-info {
+    background: #4A4A4A;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid  #4A4A4A;
+    border-radius: 5px;
+}
+
+.pay-button {
+    background:  #4A4A4A;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule th, .schedule td {
+    border: 1px solid  #4A4A4A;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule th {
+    background:  #4A4A4A;
+    color: white;
+}
+
+
+
+
+.activity-cardh {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    background-color: wait;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 15px;
+    cursor: pointer; /* إضافة تأثير التحديد عند المرور */
+}
+
+.activity-infoh {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    opacity: 0;  
+    transition: opacity 0.3s ease; 
+}
+
+.activity-cardh:hover .activity-infoh {
+    opacity: 1; 
+}
+
+.activity-card-imgh {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view-detailsh {
+    display: inline-block;
+    margin-top: 10px;
+    background-color:  #4A4A4A;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    margin-left: auto; 
+}
+
+.view-detailsh:hover {
+    background-color:  #4A4A4A;
 }
