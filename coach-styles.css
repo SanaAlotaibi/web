@@ -1,0 +1,136 @@
+
+.schedule {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.booked {
+    background: #e8aa54;
+}
+.Off-day{
+    background: #ccc;
+}
+/*^schedule page styles */
+
+.coaches-Info {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px; 
+    height: 500px;
+    overflow: auto; 
+ 
+    padding: 15px;
+    border-radius: 15px;
+	background-color:white;
+    
+}
+
+.coach {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.coach:hover{
+background-color:#f7e8ce;
+}
+.coach p {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
+    margin-left: 25px;
+}
+.coach img {
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+ 
+}
+.coach-details {
+    padding: 20px;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+   
+}
+
+#image-name-age {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coach-details img {
+    width: 259px;  
+    height: 225px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+}
+
+.coach-details p {
+    font-size: 16px;
+   
+}
+.ButtonCF {
+    display: flex;
+    justify-self: end;
+    background-color:#E67E22;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    border-color: #E67E22;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*^coach info page styles*/
+.coaches-page {
+    text-align: center;
+    padding: 20px;
+}
+.coachesHor {
+    display: flex;
+    overflow: auto; 
+    padding: 15px;
+}
+.coach-card  {
+    flex: 0 0 250px; 
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+.coach-card  a {
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+}
+
+.coach-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+.coach-card:hover{
+    background: #f7e8ce;
+    border-radius: 15px;
+}
+
