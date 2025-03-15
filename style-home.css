@@ -3,7 +3,6 @@
 
 
 
-
 main {
     padding: 20px;
     max-width: 1200px;
@@ -66,13 +65,13 @@ main {
 .carousel .card {
     display: flex;
     flex-direction: column;
-    align-items: left;
+	align-items:stretch;
     width: 30%;
 }
 
 
 .ReviewText {
-text-align: center-right;
+text-align: center;
 color : black ;
 
 }
@@ -89,4 +88,8 @@ color : black ;
     font-size: 24px;
 }
 
-
+nav ul li a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
