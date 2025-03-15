@@ -1,3 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ background-color:#F8F1E4;
+}
+
+header {
+    background: #4A4A4A;
+    color: rgb(243, 243, 243);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Button {
+    background-color:#E67E22;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    border-color: #6fb8e2;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background: #D35400;
+}
+
+
+footer {
+    background: #4A4A4A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vision img {
+    height: 100px;
+    width: 180px;
+    margin-bottom: 10px;
+ flex-direction: column;
+  
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+ 
+ 
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+
+} 
+
+
+a{
+text-decoration: none;
+}
+.back-arrow:hover {
+    color: gray;
+}
+.breadcrumbs{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+ background-color:#ddd;
+}
+logo {
+    display: flex;
+
+    align-items: center
+}
+
+.logo img {
+
+    width: 20px;
+
+    height: 50px;
+}
+
+nav ul li a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
+
+
+
+
 .container {
     display: flex;
     align-items: flex-start;
@@ -8,7 +120,6 @@
 
 .activities-sidebarj {
     width: 25%;
-    background: wait;
     padding: 15px;
     border-radius: 8px;
 	  overflow-y: auto;
@@ -30,7 +141,7 @@
     width: calc(22.33% - 15px); 
     min-width: 250px; 
     background: white;
-    border: 2px solid wait;
+    border: 2px solid  white;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
@@ -107,7 +218,7 @@ border-radius: 10px;
 		align-items: center;
     padding: 20px;
     border-radius: 80px;
-	 text-decoration:center;
+	
 }
 .payment-section {
     width: 50%;
@@ -171,7 +282,7 @@ input {
     width: 250px;
     height: 350px;
     overflow: hidden;
-    background-color: wait;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 15px;
