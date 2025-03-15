@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in Activities</title>
+	<link rel="stylesheet" href="All.css">
+    <link rel="stylesheet" href="Style-parents.css">
+</head>
+ <body>
+ <header>
+        <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
+    </header>
+<main id="enroll-page">
+
+    <div class="container" id="enroll-container">
+	    <div class="title-containerparents">
+            <a href="parents-Dashboard.html" class="back-btnparents">←</a>
+            <h2>Enroll In Activities</h2>
+        </div>
+        <form id="enroll-form">
+            <!-- اختيار الطفل -->
+            <div class="form-group">
+                <label for="kid-select">Select Kid</label>
+                <select id="kid-select">
+                    <option value="" disabled selected>Choose a kid</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Fahad">Fahad</option>
+                    <option value="Farah">Farah</option>       
+					<option value="Lana">Lana</option>
+                </select>
+            </div>
+			
+            <!-- الفلاتر -->
+            <div class="form-group filters">
+                
+		   <label for="filter-select" id="filter-label">Filter by:</label>
+            <select id="filter-select">
+                <optgroup label="By Coach">
+                    <option value="Mona">Coach Mona</option>
+                    <option value="Kamal">Coach Kamal</option>
+					<option value="latifah">Coach latifah</option>
+					<option value="Omar">Coach Omar</option>  
+					<option value="Nasreen">Coach Nasreen</option>
+
+
+                </optgroup>
+                <optgroup label="By Objective">
+                    <option value="fitness">Fitness</option>
+                    <option value="teamwork">Teamwork</option>
+                </optgroup>
+                <optgroup label="By Prerequisites">
+                    <option value="beginner">Beginner Level</option>
+                    <option value="advanced">Advanced Level</option>
+                </optgroup>
+            </select>
+            </div>
+          
+			<!-- قائمة الأنشطة -->
+			<label id="activitiesparents">Select Activities:</label>
+            <div class="activitiesparents-grid">
+                <div class="activityparents">
+                    <img src="images/Basketball (1).png" alt="basketball Image">
+                    <div class="activityparents-info">
+                        <p><strong>basketball</strong></p>
+                        <p>Coach: Mona </p>
+                    </div>
+                    <input type="checkbox">
+                </div>
+
+                
+				<div class="activityparents">
+                    <img src="images/Basketball (1).png" alt="basketball Image">
+                    <div class="activityparents-info">
+                        <p><strong>basketball</strong></p>
+                        <p>Coach: Latifah </p>
+                    </div>
+                    <input type="checkbox">
+                </div>
+
+                <div class="activityparents">
+                    <img src="images/Tennis.png" alt="Tennis Image">
+                    <div class="activityparents-info">
+                        <p><strong>Tennis</strong></p>
+                        <p>Coach: Omar</p>
+                    </div>
+                    <input type="checkbox">
+                </div>
+				<div class="activityparents">
+                    <img src="images/golf.png" alt="golf Image">
+                    <div class="activityparents-info">
+                        <p><strong>golf</strong></p>
+                        <p>Coach: Omar</p>
+                </div>
+                    <input type="checkbox">
+                </div>
+				<div class="activityparents">
+                    <img src="images/Volleyball.png" alt="Volleyball Image">
+                    <div class="activityparents-info">
+                        <p><strong>Volleyball</strong></p>
+                        <p>Coach: Nasreen</p>
+                </div>
+                    <input type="checkbox">
+			    </div>
+			    <div class="activityparents">
+                    <img src="images/Baseball.png" alt="Baseball Image">
+                    <div class="activityparents-info">
+                        <p><strong>Baseball</strong></p>
+                        <p>Coach: Nasreen</p>
+                </div>
+                    <input type="checkbox">
+                </div>
+				<div class="activityparents">
+                    <img src="images/Soccer (1).png" alt="Soccer Image">
+                    <div class="activityparents-info">
+                        <p><strong>Soccer</strong></p>
+                        <p>Coach: Kamal</p>
+                    </div>
+                    <input type="checkbox">
+                </div>
+            </div>				
+            <button type="submit" id="enroll-btn">Enroll</button>
+        </form>
+    </div>
+	</main>
+	 <footer>
+        <div class="vision">
+            <img src="images/logo.png" alt="Vision">
+            <p>OUR VISION</p>
+            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to  promoting personal growth, camaraderie, and a healthy, active lifestyle..</p>
+        </div>
+        <p>Copyright &copy; 2024 Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/xpng.jpg" alt="x"></a>
+        </div>
+    </footer>
+	
+</body>
+</html>

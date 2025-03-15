@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate Activities</title>
+	<link rel="stylesheet" href="All.css">
+    <link rel="stylesheet" href="Style-parents.css">
+</head>
+ <body> 
+<header>
+   <a href="HomePages.html"><img src="images/logo.png" alt="KoraKids"></a>
+</header>
+<main id="evaluation-page">
+    <div class="container" id="evaluation-container">
+        <div class="title-containerparents">
+            <a href="parents-Dashboard.html" class="back-btnparents">&#8592;</a>
+            <h2>Evaluate Activity</h2>
+        </div>
+        <form id="evaluation-form">
+            <!-- اختيار النشاط -->
+            <div class="form-group">
+                <label for="activityparents-select">Select Activity</label>
+                <select id="activityparents-select">
+                    <option value="" disabled selected>Choose an activity</option>
+                    <option value="basketball">basketball</option> 
+					<option value="basketball">Baseball</option>
+                    <option value="Soccer">Soccer</option>
+					<option value="golf">golf</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="activity3">Volleyball</option>
+                </select>
+            </div>
+            
+            <!-- التقييم بالنجوم -->
+            <div class="form-group rating">
+                <label>Rate Activity:</label>
+                <div class="stars">
+                   <p>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            
+            <!-- ملاحظات -->
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" rows="7" placeholder="Write your feedback here..."></textarea>
+            </div>
+            
+            <button type="submit" id="evaluation-btn">Submit Evaluation</button>
+        </form>
+    </div>
+	</main>
+	 <footer>
+        <div class="vision">
+            <img src="images/logo.png" alt="Vision">
+            <p>OUR VISION</p>
+            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to  promoting personal growth, camaraderie, and a healthy, active lifestyle..</p>
+        </div>
+        <p>Copyright &copy; 2024 Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/xpng.jpg" alt="x"></a>
+        </div>
+    </footer>
+	
+</body>
+</html>

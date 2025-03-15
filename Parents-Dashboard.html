@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard</title>	
+	<link rel="stylesheet" href="All.css">
+    <link rel="stylesheet" href="Style-parents.css">
+</head>
+
+<body id="parents">
+<header>
+        <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
+        <nav>
+            <ul>
+               <li><a href="HomePage.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="schedule.html">Coaches</a></li>
+                <li><a href="Parents-Dashboard.html">Parents</a></li>
+                <li><a href="Admin.html">Administrator</a></li>
+            </ul>
+        </nav>
+</header>
+   <nav class="breadcrumbs">
+       <a href="Homepage.html" class="nav-link" style="color:black">Home</a> > <span class="current-page">Parents</span>
+   </nav>
+  
+    <div id="header2-parents">
+	   <h3 id="dashboard-titleparents">My Kids & Activities</h3>
+	   <button id="logout-btnparents">Logout</button>
+    </div>
+    
+    <main >
+        
+        <section id="kids-section" class="kids-list">
+            <h2 class="section-titlekids">My Kids</h2>
+            <label for="sort-options" class="sort-label">Sort by:</label>
+            <select id="sort-options" class="sort-dropdown">
+                <optgroup label="Sort by Name">
+                    <option value="name-asc">A-Z</option>
+                    <option value="name-desc">Z-A</option>
+                </optgroup>
+                <optgroup label="Sort by Age">
+                    <option value="age-asc">Youngest First</option>
+                    <option value="age-desc">Oldest First</option>
+                </optgroup>
+            </select>
+            
+            <div id="kids-container" class="kids-container">
+                <div class="kid-card" id="kid-1">
+                    <img src="images/badr.png" alt="Kid Image" class="kid-image">
+                    <p class="kid-name"><strong>Badr Khalid</strong></p>
+                    <p class="kid-age">Age: 15</p>
+                    <button class="details-btnkid">View Details</button>
+                </div>
+                <div class="kid-card" id="kid-2">
+                    <img src="images/Lana.png" alt="Lana Image" class="kid-image">
+                    <p class="kid-name"><strong>Lana Khalid</strong></p>
+                    <p class="kid-age">Age: 6</p>
+                    <button class="details-btnkid">View Details</button>
+                </div>
+                <div class="kid-card" id="kid-3">
+                    <img src="images/Farah.png" alt="Farah Image" class="kid-image">
+                    <p class="kid-name"><strong>Farah Khalid</strong></p>
+                    <p class="kid-age">Age: 8</p>
+                    <button class="details-btnkid">View Details</button>
+                </div>
+				<div class="kid-card" id="kid-4">
+                    <img src="images/Fahad.png" alt="Fahad Image" class="kid-image">
+                    <p class="kid-name"><strong>Fahad Khalid</strong></p>
+                    <p class="kid-age">Age: 10</p>
+                    <button class="details-btnkid">View Details</button>
+                </div>
+               <!-- <div class="kid-card add-kid" id="add-kid">
+                    <p class="add-kid-text">+ Add New Kid</p>
+                </div>-->
+            </div>
+        </section>
+        
+        <section id="manage-kids-section" class="manage-kids">
+            <h2 class="section-title">Manage Kids & Activities</h2>
+            <a href="register-kid.html" class="manage-btnparents" id="register-kid-btn">Register New Kid</a>
+            <a href="enroll-activities.html" class="manage-btnparents" id="enroll-activities-btn">Enroll in Activities</a>
+            <a href="evaluate-activities.html" class="manage-btnparents" id="evaluate-activities-btn">Evaluate Activities</a>
+        </section>
+    </main>
+    <footer>
+        <div class="vision">
+            <img src="images/logo.png" alt="Vision">
+            <p>OUR VISION</p>
+            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to  promoting personal growth, camaraderie, and a healthy, active lifestyle..</p>
+        </div>
+        <p>Copyright &copy; 2024 Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/xpng.jpg" alt="x"></a>
+        </div>
+    </footer>  
+</body>
+</html>

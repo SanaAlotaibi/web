@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a New Kid</title>
+	<link rel="stylesheet" href="All.css">
+    <link rel="stylesheet" href="Style-parents.css">
+</head>
+<body>
+<header>
+        <a href="home.html"><img src="images/logo.png" alt="KoraKids"></a>
+</header> 
+<main id="register-page">
+
+    <div class="container" id="register-container">
+        <div class="title-containerparents">
+            <a href="parents-Dashboard.html" class="back-btnparents">←</a>
+            <h2>Register a New Kid</h2>
+        </div>
+        <form id="register-form">
+		  
+            <div class="form-group">
+                <label for="child-name">Child's Name</label>
+                <input type="text" id="child-name" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo (Optional)</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+	    <div class="form-row">
+            <div class="form-group"> 
+                <label for="birthdate">Birth Date</label>
+                <input type="date" id="birthdate" required>
+			</div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" readonly>
+            </div>
+	    </div>
+		
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-group" id="gender-group">
+                    <input type="radio" name="gender" value="Male" id="male" required> <label for="male">Male</label>
+                    <input type="radio" name="gender" value="Female" id="female" required> <label for="female">Female</label>
+                </div>
+            </div>	   
+	    <div class="form-row">
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" required>
+            </div>
+	     </div>
+	    <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"  placeholder="9665xxxxxxxx" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+		 </div>	
+            <button type="submit" class="btn" id="register-btn">Register Kid</button>
+        </form>
+    </div>
+	</main>
+	</body>
+	 <footer>
+        <div class="vision">
+            <img src="images/logo.png" alt="Vision">
+            <p>OUR VISION</p>
+            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to  promoting personal growth, camaraderie, and a healthy, active lifestyle..</p>
+        </div>
+        <p>Copyright &copy; 2024 Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/xpng.jpg" alt="x"></a>
+        </div>
+    </footer>
+</body>
+</html>

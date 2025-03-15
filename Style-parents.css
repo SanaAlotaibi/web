@@ -1,0 +1,252 @@
+
+/* Header */
+#header2-parents {
+    background-color: #ffffff;
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+#section-titlekids{
+		margin-bottom: 20px
+}
+
+#logout-btnparents {
+    background-color: #E67E22 ;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#logout-btnparents:hover {
+	 background-color: #D35400 
+}
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+#dashboard-titleparents {
+    text-align: center;
+    color: #333;
+}
+
+/* Kids Section */
+#kids-section,#manage-kids-section{
+	background-color:white;
+	padding: 15px;
+	border-radius: 8px;
+}
+.kids-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+	margin-top:20px
+}
+
+.kid-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.kid-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details-btnkid {
+    background-color: #2962FF    ;  
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.details-btnkid:hover{
+	 background-color: #1E4DC7 ;
+}
+/* Add Kid Card 
+.add-kid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.add-kid-text {
+    font-size: 18px;
+    color: #666;
+}*/
+
+/* Manage Kids & Activities */
+.manage-kids {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.manage-btnparents {
+    display: block;
+    background-color: #27AE60 ; 
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.manage-btnparents:hover {
+background-color: #1E8449;
+}
+/* تنسيق الصفحة بالكامل */
+#register-page ,#enroll-page, #evaluation-page{
+    font-family: Arial, sans-serif;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding;0px;
+}
+
+/* تنسيق الحاوية الرئيسية */
+#register-container ,#enroll-container, #evaluation-container{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 700px;
+	margin :20px;
+}
+
+/* تنسيق العنوان */
+#register-container h2, #enroll-container h2,#evaluation-container h2{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.title-containerparents {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 
+
+/* تنسيق الحقول */
+.form-group {
+    margin: 15px;
+	flex:1;
+}
+
+label[type="sort-options"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="file"]
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* تنسيق مجموعة الجنس */
+#gender-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* تنسيق زر التسجيل */
+#register-btn, #enroll-btn,#evaluation-btn {
+    width: 100%;
+    padding: 10px;
+    background: #E67E22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#register-btn:hover ,#enroll-btn:hover,#evaluation-btn:hover{
+    background: #D35400;
+}
+
+.form-row  {
+    display: flex;
+    gap: 10px;
+	flex: 1;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+/* تنسيق الأنشطة */
+
+.activitiesparents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+    gap: 15px; /* المسافة بين العناصر */
+    max-width: 800px; /* عرض الشبكة */
+    margin: 15px; /* توسيط في الصفحة */
+}
+
+.activityparents {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activityparents img {
+    width: 60px;
+    height: 60px;
+    background: lightgray;
+    border-radius: 5px;
+}
+
+.activityparents-info {
+    flex-grow: 1; /* يجعل النص يأخذ المساحة المتبقية */
+}
+
+.activityparents input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+
+#activitiesparents {
+    margin: 15px;
+    padding: 10px;
+}
+
+ #activityparents-select,  #feedback {
+    width: 100%;
+	padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ #feedback {
+    resize: none;
+}
