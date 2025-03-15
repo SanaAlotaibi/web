@@ -107,3 +107,9 @@ logo {
 
     height: 50px;
 }
+
+a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
