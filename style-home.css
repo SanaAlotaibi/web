@@ -1,0 +1,92 @@
+
+
+
+
+
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 200px;
+	color : orange ;
+	
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+	
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    flex: 1;
+}
+.text{
+	text-align: center;
+	color : black ;
+    
+}
+ .stars {
+	text-align:  right;
+	margin: 0 ;
+	
+ }
+ 
+ .actname{
+	 font-weight: bold ;
+ }
+ 
+
+.carousel .card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 30%;
+}
+
+
+.ReviewText {
+text-align: center-right;
+color : black ;
+
+}
+
+.revstars{
+
+	text-align:  left;		
+}
+
+
+.prev, .next {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+
