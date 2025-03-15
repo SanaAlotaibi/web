@@ -78,7 +78,7 @@
 }
 
 .info {
-    background:  #4A4A4A;
+    background:  #E67E22;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -88,7 +88,7 @@
 	  margin: 5px;
 }
 .view-button, .join-button {
-background: #4A4A44;
+background: #E67E22;
 text-decoration: none;
 color: white; 
 border-radius: 10px;
@@ -101,7 +101,7 @@ border-radius: 10px;
    display: flex;
     justify-content: center;
 	  color: white;
-    background:  #4A4A4A;
+    background:  #E67E22;
     border: none;
     cursor: pointer;
 	 margin-top:20px;
@@ -122,7 +122,7 @@ border-radius: 10px;
 }
 
 .payment-info {
-    background: #4A4A4A;
+    background: #E67E22;
     padding: 10px;
     border-radius: 5px;
     margin: 20px 0;
@@ -136,12 +136,12 @@ form {
 
 input {
     padding: 10px;
-    border: 1px solid  #4A4A4A;
+    border: 1px solid  #E67E22;
     border-radius: 5px;
 }
 
 .pay-button {
-    background:  #4A4A4A;
+    background:  #E67E22;
     color: white;
     padding: 15px;
     border: none;
@@ -155,13 +155,13 @@ input {
 }
 
 .schedule th, .schedule td {
-    border: 1px solid  #4A4A4A;
+    border: 1px solid  #E67E22;
     padding: 10px;
     text-align: center;
 }
 
 .schedule th {
-    background:  #4A4A4A;
+    background:  #E67E22;
     color: white;
 }
 
@@ -205,7 +205,7 @@ input {
 .view-detailsh {
     display: inline-block;
     margin-top: 10px;
-    background-color:  #4A4A4A;
+    background-color:  #E67E22;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -213,5 +213,5 @@ input {
 }
 
 .view-detailsh:hover {
-    background-color:  #4A4A4A;
+    background-color:  #E67E22;
 }
