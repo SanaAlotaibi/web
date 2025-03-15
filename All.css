@@ -106,5 +106,10 @@ logo {
 
     height: 50px;
 }
+nav ul li a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
 
 
