@@ -1,5 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ background-color:#F8F1E4;
+}
+
+header {
+    background: #e9cc9d8a;
+    color: rgb(243, 243, 243);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+
+}
+
+nav ul li a {
+    color: #be893f;
+    text-decoration: none;
+}
+
+.Button {
+    background-color:#E67E22;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background: #D35400;
+}
 
 
+footer {
+    background: #e9cc9d8a;
+    color: #be893f;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vision img {
+    height: 100px;
+    width: 250px;
+    margin-bottom: 10px;
+ flex-direction: column;
+    align-items: right;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+ 
+ 
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+
+} 
+.back-arrow{
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+
+}
+
+a{
+text-decoration: none;
+}
+.back-arrow:hover {
+    color: gray;
+}
+.breadcrumbs{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+ background-color:#edcda0;
+}
+logo {
+    display: flex;
+
+    align-items: center
+}
+
+.logo img {
+
+    width: 20px;
+
+    height: 50px;
+}
+
+a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
+nav ul li a:hover {
+	background-color: darkseagreen;
+	color: maroon;
+	font-weight: bold;
+}
 
 .container {
     display: flex;
@@ -78,7 +196,7 @@
 }
 
 .info {
-    background:  #E67E22;
+    background: #E67E22;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -101,7 +219,7 @@ border-radius: 10px;
    display: flex;
     justify-content: center;
 	  color: white;
-    background:  #E67E22;
+    background: #E67E22;
     border: none;
     cursor: pointer;
 	 margin-top:20px;
@@ -111,43 +229,7 @@ border-radius: 10px;
     border-radius: 80px;
 	
 }
-.payment-section {
-    width: 50%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
-.payment-info {
-    background: #E67E22;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input {
-    padding: 10px;
-    border: 1px solid  #E67E22;
-    border-radius: 5px;
-}
-
-.pay-button {
-    background:  #E67E22;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
 .schedule {
     width: 100%;
     border-collapse: collapse;
@@ -155,7 +237,7 @@ input {
 }
 
 .schedule th, .schedule td {
-    border: 1px solid  #E67E22;
+    border: 1px solid #E67E22;
     padding: 10px;
     text-align: center;
 }
@@ -170,8 +252,8 @@ input {
 
 .activity-cardh {
     position: relative;
-    width: 250px;
-    height: 350px;
+    width: 400px;
+    height: 500px;/*تعديل على الحجم*/
     overflow: hidden;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
