@@ -13,17 +13,6 @@
 		margin-bottom: 20px
 }
 
-#logout-btnparents {
-    background-color: #E67E22 ;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-#logout-btnparents:hover {
-	 background-color: #D35400 
-}
 /* Main Content */
 main {
     padding: 20px;
