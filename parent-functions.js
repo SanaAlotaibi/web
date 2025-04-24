@@ -129,8 +129,10 @@ function showKidDetails(index) {
     <p><strong>Phone:</strong> ${kid.phone || "N/A"}</p>
   `;
 }
+
 function setupRegisterForm() {
   var birthdateField = document.getElementById("birthdate");
+
   birthdateField.onchange = function () {
     var birthdateValue = birthdateField.value;
     if (birthdateValue) {
@@ -162,54 +164,47 @@ function setupRegisterForm() {
     var height = document.getElementById("height").value.trim();
     var phone = document.getElementById("phone").value.trim();
     var email = document.getElementById("email").value.trim();
-    var photo = document.getElementById("photo").files[0]; // لرفع الصورة
+    var photo = document.getElementById("photo").files[0];
 
-    // التحقق من الحقول الفارغة
     if (!name || !birthdate || !age || !gender || !weight || !height || !phone || !email) {
       alert("Please fill in all required fields.");
       return false;
     }
 
-    // الاسم لا يبدأ برقم
     if (/^\d/.test(name)) {
       alert("Child's name cannot start with a number.");
       return false;
     }
 
-    // تحقق من رقم الجوال (10 أرقام فقط)
     if (!/^\d{10}$/.test(phone)) {
       alert("Phone number must be exactly 10 digits.");
       return false;
     }
 
-    // التحقق من وجود @ في الإيميل
     if (!email.includes("@")) {
       alert("Email must contain '@'");
       return false;
     }
 
-    // تاريخ الميلاد يجب أن يكون في أو قبل 2020
     var year = new Date(birthdate).getFullYear();
     if (year > 2020) {
       alert("Child must be born in 2020 or earlier.");
       return false;
     }
 
-    // إذا كانت هناك صورة، نحفظها
-    var imageURL = "images/default-kid.png"; // صورة افتراضية
+    var imageURL = "images/default-kid.png";
     if (photo) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        imageURL = e.target.result;  // تحويل الصورة إلى Data URL
-        saveData(); // بعد تحميل الصورة، يتم حفظ البيانات
+        imageURL = e.target.result;
+        saveData();
       };
-      reader.readAsDataURL(photo);  // تحويل الصورة إلى Data URL
+      reader.readAsDataURL(photo);
     } else {
-      saveData(); // إذا لم تكن هناك صورة، حفظ البيانات مع الصورة الافتراضية
+      saveData();
     }
 
     function saveData() {
-      // حفظ بيانات الطفل في localStorage
       var kids = JSON.parse(localStorage.getItem("kids")) || [];
       kids.push({
         name: name,
@@ -223,12 +218,19 @@ function setupRegisterForm() {
       });
       localStorage.setItem("kids", JSON.stringify(kids));
 
+      printChildData({
+        name: name,
+        age: age,
+        gender: gender,
+        weight: weight,
+        height: height,
+        phone: phone,
+        email: email,
+        image: imageURL
+      });
+
       alert("Child registered successfully!");
-
-      // عرض البيانات على الصفحة الرئيسية
       displayChildInfo(name, imageURL);
-
-      // إعادة تعيين النموذج
       document.getElementById("register-form").reset();
       document.getElementById("age").value = "";
     }
@@ -236,6 +238,26 @@ function setupRegisterForm() {
     return false;
   };
 }
+
+function printChildData(child) {
+  var printWindow = window.open('', '', 'width=600,height=700');
+  printWindow.document.write('<html><head><title>Child Info</title></head><body>');
+  printWindow.document.write('<h2>Child Registration Details</h2>');
+  printWindow.document.write('<img src="' + child.image + '" alt="Child Photo" width="150" height="150"><br><br>');
+  printWindow.document.write('<p><strong>Name:</strong> ' + child.name + '</p>');
+  printWindow.document.write('<p><strong>Age:</strong> ' + child.age + '</p>');
+  printWindow.document.write('<p><strong>Gender:</strong> ' + child.gender + '</p>');
+  printWindow.document.write('<p><strong>Weight:</strong> ' + child.weight + '</p>');
+  printWindow.document.write('<p><strong>Height:</strong> ' + child.height + '</p>');
+  printWindow.document.write('<p><strong>Phone:</strong> ' + child.phone + '</p>');
+  printWindow.document.write('<p><strong>Email:</strong> ' + child.email + '</p>');
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
+}
+
+
+
 
 // عرض البيانات في الصفحة الرئيسية
 function displayChildInfo(name, imageURL) {
@@ -250,6 +272,7 @@ function displayChildInfo(name, imageURL) {
   `;
   kidsListContainer.appendChild(kidInfoDiv);
 }
+
 
 
 // ========== EVALUATE ACTIVITY ==========
