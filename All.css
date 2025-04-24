@@ -77,7 +77,7 @@ footer {
     height: 30px; 
 }  
  
-.back-arrow { 
+.back-arrow ,.back-btnparents{ 
     display: inline; 
     font-size: 20px; 
     font-weight: bold; 
@@ -85,7 +85,7 @@ footer {
     cursor: pointer; 
 } 
  
-.back-arrow:hover { 
+.back-arrow:hover ,.back-btnparents:hover { 
     color: #4A4A4A; 
 } 
  
