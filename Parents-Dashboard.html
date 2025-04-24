@@ -9,8 +9,18 @@
 <body id="parents" onload="loadDashboard()">
 
 <header>
-  <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
-</header>
+        <a href="HomePage" accesskey="h"><img src="images/logo.png" alt="company logo"></a>
+       
+        <nav>
+            <ul>
+                <li><a href="HomePage.html" accesskey="h">Home</a></li>
+                <li><a href="activities.html" accesskey="a">Activities</a></li>
+                <li><a href="coaches.html" accesskey="c">Coaches</a></li>
+                <li><a href="Parents-Dashboard.html" accesskey="p">Parents</a></li>
+                <li><a href="Admin.html" accesskey="d">Administrator</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <nav class="breadcrumbs">
   <p><a href="HomePage.html">Home</a> > <span class="current-page">Parents</span></p>
@@ -22,7 +32,10 @@
 
 <main>
   <section id="kids-section" class="kids-list">
-    <h2 class="section-titlekids">My Kids</h2>
+    <h2 class="section-titlekids">
+  My Kids 
+  <a href="#kids-section" accesskey="k" style="position:absolute; left:-9999px;">(Access Key K)</a>
+</h2>
     <div class="form-group sort">
       <label for="sort-options" class="sort-label">Sort by:</label>
       <select id="sort-options" class="sort-dropdown" onchange="sortKids()">
@@ -41,7 +54,11 @@
   </section>
 
   <section id="manage-kids-section" class="manage-kids">
-    <h2 class="section-title">Manage Kids & Activities</h2>
+    <h2 class="section-title">
+  Manage Kids & Activities 
+  <a href="#manage-kids-section" accesskey="m" style="position:absolute; left:-9999px;">(Access Key M)</a>
+</h2>
+
     <a href="register-kid.html" class="manage-btnparents">Register New Kid</a>
     <a href="enroll-activities.html" class="manage-btnparents">Enroll in Activities</a>
     <a href="evaluate-activities.html" class="manage-btnparents">Evaluate Activities</a>
@@ -61,7 +78,7 @@
             <a href="#"><img src="images/xpng.jpg" alt="x"></a>
         </div>
     </footer>
-
+<script src="Allscript.js"></script>
 <script src="parent-functions.js"></script>
 </body>
 </html>
