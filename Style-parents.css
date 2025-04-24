@@ -327,3 +327,82 @@ input[type="file"]
 #enroll-btn:hover {
     background-color: #45a049;
 }
+
+
+/* تنسيق حقل التقييم */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+/* إخفاء الراديو */
+.stars input[type="radio"] {
+  display: none;
+}
+
+/* شكل النجوم */
+.stars label {
+  font-size: 30px;
+  color: #ccc; /* رمادي بشكل افتراضي */
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 5px;
+}
+
+/* عند التحديد (النجوم الذهبية) */
+.stars input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+/* عند التحويم على النجوم */
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 768px) {
+  #register-container,
+  #enroll-container,
+  #evaluation-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+    .kids-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kid-card {
+    width: 90%;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
+}
+
+  .activitiesparents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .stars label {
+    font-size: 26px;
+  }
+
+  .manage-btnparents {
+    width: 90%;
+  }
+}
