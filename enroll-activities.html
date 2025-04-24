@@ -9,8 +9,10 @@
 </head>
  <body>
  <header>
-        <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
-    </header>
+       <a href="HomePage.html">
+    <img src="images/logo.png" alt="KoraKids Logo - Home" style="width: 450px; height: auto;" />
+</a>
+ </header>
 <main id="enroll-page">
 
     <div class="container" id="enroll-container">
@@ -22,18 +24,18 @@
         <h2>Enroll in an Activity</h2>
         <form id="enrollForm">
             <label for="kidSelect">Select Kid:</label>
-            <select id="kidSelect" accesskey="sk"><option value="">-- Select --</option></select>
+            <select id="kidSelect" accesskey="k"><option value="">-- Select --</option></select>
 
             <label for="coachFilter">Filter by Coach:</label>
-            <select id="coachFilter" accesskey="fc"><option value="">-- Select --</option></select>
+            <select id="coachFilter" accesskey="o"><option value="">-- Select --</option></select>
 
             <label for="prerequisiteFilter">Filter by Prerequisite:</label>
             <select id="prerequisiteFilter" accesskey="p"><option value="">-- Select --</option></select>
 
             <label for="activitySelect">Select Activity:</label>
-            <select id="activitySelect" accesskey="sa"><option value="">-- Select --</option></select>
+            <select id="activitySelect" accesskey="v"><option value="">-- Select --</option></select>
 
-            <button type="submit" id="enroll-btn"accesskey="e">Submit</button>
+            <button type="submit" id="enroll-btn"accesskey="s">Submit</button>
         </form>
 
         <div id="enrollResult"></div>
@@ -162,7 +164,5 @@ window.onload = function () {
         </div>
     </footer>
 	<script src="enroll.js"></script>
-	 <script src="Allscript.js"></script>
-
 </body>
 </html>
