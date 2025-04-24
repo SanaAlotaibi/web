@@ -1,0 +1,110 @@
+/* Dashboard Overview */
+.dashboard {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.overview-cards-sana {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 5px 10px;
+}
+
+.card-sana {
+   background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+	text-align: center
+}
+
+/* Scrollable List */
+.scrollable-list-sana {
+    max-height: 120px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+}
+
+.scrollable-list-sana ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.scrollable-list-sana ul li {
+    margin-bottom: 5px;
+}
+
+/* Registered Children */
+.registered-children {
+ background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+	margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.registered-children ul {
+    padding-left: 20px;
+}
+
+.registered-children ul {
+    font-weight: bold;
+}
+
+.registered-children ul li ul {
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+/* Activities Section */
+.activities {
+  background-color: white;
+    padding: 15px;
+	margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+.activity-box-admin {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.activity-box-admin dl {
+    margin: 0;
+}
+
+.activity-box-admin dt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.activity-box-admin dd {
+    margin: 5px 0 0 15px;
+}
+
+.coach-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 5px 10px;
+}
+
+.schedule-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: auto; 
+}
