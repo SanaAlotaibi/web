@@ -91,9 +91,11 @@ footer {
  
 .breadcrumbs { 
     padding: 10px 20px; 
-    font-size: 14px; 
+    font-size: 20px;
+    font-weight: bold; 
+	
     color: white; 
-    background-color: #4A4A4A; 
+    background-color: #FFE6F0; 
 } 
  
 .logo img { 
@@ -134,63 +136,70 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px #C6EFFF;
 }                                                                                                                                                                           
 
-:root {
-  --bg-color: #F8F1E4;
-  --header-footer-bg: #e9cc9d8a;
-  --text-color: #333;
-  --accent-color: #E67E22;
-  --card-bg: white;
-  --nav-hover: darkseagreen;
-}
-
 
 .dark-theme {
-  --bg-color: #121212; 
-  --header-footer-bg: #1e1e1e; 
-  --text-color: #e0e0e0; 
-  --accent-color: #ff8a65; 
-  --card-bg: white; 
-  --nav-hover: #2e7d72; 
+  background-color: #2a2d45; /* Soft dark blue-gray */
+  color: #f0f0f7; /* Light lavender-white text */
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: all 0.2s ease;
+/* Header & Navigation */
+.dark-theme header {
+  background: linear-gradient(to right, #4a3f69, #6d5b8a); /* Soft purple gradient */
+  color: #fff;
 }
 
-header, footer {
-  background: var(--header-footer-bg);
+.dark-theme nav ul li a {
+  color: #f0e6ff;
 }
 
-.card {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.dark-theme nav ul li a:hover {
+  background-color: #8a6bbd; /* Light purple hover */
+  color: #fff;
 }
 
-nav ul li a:hover {
-  background-color: var(--nav-hover);
-  color: maroon;
-  border-radius: 6px;
-  padding: 0.3rem 0.5rem;
+/* Buttons */
+.dark-theme .Button {
+  background-color: #6d5b8a; /* Muted purple */
+  color: #fff;
 }
 
-.Button {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+.dark-theme .Button:hover {
+  background-color: #8a6bbd; /* Brighter purple */
 }
 
-.Button:hover {
-  background-color: #e76b4d; /* Slightly deeper tone on hover */
+/* Cards (Activities & Reviews) */
+.dark-theme .card {
+  background-color: #3a3b5a; /* Soft dark slate */
+  color: #f0f0f7;
+  border: 1px solid #5a4b7a; /* Subtle purple border */
 }
 
+.dark-theme .card:hover {
+  box-shadow: 0 4px 12px rgba(138, 107, 189, 0.3); /* Soft purple glow */
+}
+
+/* Footer */
+.dark-theme footer {
+  background-color: #4a3f69; /* Deep purple */
+  color: #f0e6ff;
+}
+
+/* Breadcrumbs */
+.dark-theme .breadcrumbs {
+  background-color: #5a4b7a; /* Medium purple */
+  color: #fff;
+}
+
+/* Input Fields (for forms) */
+.dark-theme input,
+.dark-theme textarea {
+  background-color: #3a3b5a;
+  color: #f0f0f7;
+  border-color: #6d5b8a;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus {
+  border-color: #8a6bbd;
+  box-shadow: 0 0 8px rgba(138, 107, 189, 0.5);
+}
