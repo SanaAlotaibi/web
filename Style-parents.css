@@ -53,16 +53,18 @@ main {
 }
 
 .details-btnkid {
-    background-color: #2962FF    ;  
+    background-color: #2196F3;  
     color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 5px;
 }
-.details-btnkid:hover{
-	 background-color: #1E4DC7 ;
+ .details-btnkid:hover {
+  opacity: 0.85;
 }
+
+
 .kid-extra {
   background-color: #f4f4f4;
   padding: 10px;
@@ -93,7 +95,7 @@ main {
 
 .manage-btnparents {
     display: block;
-    background-color: #27AE60 ; 
+   background-color: #4CAF50; 
     color: white;
     padding: 10px;
     margin: 10px auto;
@@ -102,9 +104,16 @@ main {
     text-decoration: none;
     border-radius: 5px;
 }
-.manage-btnparents:hover {
-background-color: #1E8449;
+a.manage-btnparents:hover {
+ 
+ opacity: 0.85;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  font-weight: normal !important;
+
 }
+
+
 /* تنسيق الصفحة بالكامل */
 #register-page ,#enroll-page, #evaluation-page{
     font-family: Arial, sans-serif;
@@ -171,7 +180,7 @@ input[type="file"]
 #register-btn, #enroll-btn,#evaluation-btn {
     width: 100%;
     padding: 10px;
-    background: #E67E22;
+    background-color: #FF9800; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -180,7 +189,7 @@ input[type="file"]
 }
 
 #register-btn:hover ,#enroll-btn:hover,#evaluation-btn:hover{
-    background: #D35400;
+          opacity: 0.85;
 }
 
 .form-row  {
