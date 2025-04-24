@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
- background-color:#F8F1E4;
+ background-color:#FFF7CC;
 }
 
 header {
-    background: #e9cc9d8a;
+    background: #D6F1FF -> #FFE6F0;
     color: rgb(243, 243, 243);
     padding: 10px;
     text-align: center;
@@ -25,27 +25,27 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #be893f;
+    color: #4A4A4A;
     text-decoration: none;
 }
 
 .Button {
-    background-color:#E67E22;
+    background-color:#E8E3F9;
     text-decoration: none;
-    color: white;
+    color: #FFE6F0;
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
 }
 
 .Button:hover {
-    background: #D35400;
+    background: #D6F1FF;
 }
 
 
 footer {
-    background: #e9cc9d8a;
-    color: #be893f;
+    background: #DFFFE2;
+    color: #4A4A4A;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -87,13 +87,13 @@ a{
 text-decoration: none;
 }
 .back-arrow:hover {
-    color: gray;
+    color: #4A4A4A;
 }
 .breadcrumbs{
     padding: 10px 20px;
     font-size: 14px;
     color: black;
- background-color:#edcda0;
+ background-color:#4A4A4A;
 }
 logo {
     display: flex;
@@ -109,12 +109,12 @@ logo {
 }
 
 a:hover {
-	background-color: darkseagreen;
+	background-color: #FFE6F0;
 	color: maroon;
 	font-weight: bold;
 }
 nav ul li a:hover {
-	background-color: darkseagreen;
+	background-color: #FFE6F0;
 	color: maroon;
 	font-weight: bold;
 }
