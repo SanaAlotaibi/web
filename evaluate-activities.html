@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluate Activities</title>
-	<link rel="stylesheet" href="All.css">
-    <link rel="stylesheet" href="Style-parents.css">
+  <meta charset="UTF-8">
+  <title>Evaluate Activities</title>
+  <link rel="stylesheet" href="All.css">
+  <link rel="stylesheet" href="Style-parents.css">
+  <style>
+    .stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+    }
+
+    .stars input[type="radio"] {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+      padding: 0 5px;
+    }
+
+    .stars input[type="radio"]:checked ~ label {
+      color: gold;
+    }
+
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+  </style>
 </head>
- <body> 
+<body>
 <header>
-   <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
+  <a href="HomePage.html"><img src="images/logo.png" alt="KoraKids"></a>
 </header>
+
 <main id="evaluation-page">
-    <div class="container" id="evaluation-container">
-        <div class="title-containerparents">
-            <a href="parents-Dashboard.html" class="back-btnparents">&#8592;</a>
-            <h2>Evaluate Activity</h2>
-        </div>
-        <form id="evaluation-form">
-            <!-- اختيار النشاط -->
-            <div class="form-group">
-                <label for="activityparents-select">Select Activity</label>
-                <select id="activityparents-select">
-                    <option value="" disabled selected>Choose an activity</option>
-                    <option value="basketball">basketball</option> 
-					<option value="basketball">Baseball</option>
-                    <option value="Soccer">Soccer</option>
-					<option value="golf">golf</option>
-                    <option value="Tennis">Tennis</option>
-                    <option value="activity3">Volleyball</option>
-                </select>
-            </div>
-            
-            <!-- التقييم بالنجوم -->
-            <div class="form-group rating">
-                <label>Rate Activity:</label>
-                <div class="stars">
-                   <p>⭐⭐⭐⭐⭐</p>
-                </div>
-            </div>
-            
-            <!-- ملاحظات -->
-            <div class="form-group">
-                <label for="feedback">Feedback</label>
-                <textarea id="feedback" rows="7" placeholder="Write your feedback here..."></textarea>
-            </div>
-            
-            <button type="submit" id="evaluation-btn">Submit Evaluation</button>
-        </form>
+  <div class="container" id="evaluation-container">
+    <div class="title-containerparents">
+      <a href="parents-Dashboard.html" class="back-btnparents">&#8592;</a>
+      <h2>Evaluate Activity</h2>
     </div>
-	</main>
-	 <footer>
+
+    <form id="evaluation-form" onsubmit="submitEvaluation(); return false;">
+      <div class="form-group">
+        <label for="activityparents-select">Select Activity</label>
+        <select id="activityparents-select">
+          <option value="" disabled selected>Choose an activity</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Baseball">Baseball</option>
+          <option value="Soccer">Soccer</option>
+          <option value="Golf">Golf</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Volleyball">Volleyball</option>
+        </select>
+      </div>
+
+      <div class="form-group rating">
+        <label>Rate Activity:</label>
+        <div class="stars">
+<!-- ✅ من 5 إلى 1 -->
+<input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+<input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+<input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+<input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+<input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" rows="7" placeholder="Write your feedback here..."></textarea>
+      </div>
+
+      <button type="submit" id="evaluation-btn">Submit Evaluation</button>
+    </form>
+  </div>
+</main>
+
+<footer>
         <div class="vision">
             <img src="images/logo.png" alt="Vision">
             <p>OUR VISION</p>
@@ -63,6 +97,7 @@
             <a href="#"><img src="images/xpng.jpg" alt="x"></a>
         </div>
     </footer>
-	
+
+<script src="parent-functions.js"></script>
 </body>
 </html>
