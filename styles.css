@@ -1,123 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
- background-color:#F8F1E4;
-}
 
-header {
-    background: #e9cc9d8a;
-    color: rgb(243, 243, 243);
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-
-}
-
-nav ul li a {
-    color: #be893f;
-    text-decoration: none;
-}
-
-.Button {
-    background-color:#E67E22;
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.Button:hover {
-    background: #D35400;
-}
-
-
-footer {
-    background: #e9cc9d8a;
-    color: #be893f;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.vision img {
-    height: 100px;
-    width: 250px;
-    margin-bottom: 10px;
- flex-direction: column;
-    align-items: right;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
- 
- 
-}
-
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-
-} 
-.back-arrow{
-    display: inline;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    cursor: pointer;
-
-}
-
-a{
-text-decoration: none;
-}
-.back-arrow:hover {
-    color: gray;
-}
-.breadcrumbs{
-    padding: 10px 20px;
-    font-size: 14px;
-    color: black;
- background-color:#edcda0;
-}
-logo {
-    display: flex;
-
-    align-items: center
-}
-
-.logo img {
-
-    width: 20px;
-
-    height: 50px;
-}
-
-a:hover {
-	background-color: darkseagreen;
-	color: maroon;
-	font-weight: bold;
-}
-nav ul li a:hover {
-	background-color: darkseagreen;
-	color: maroon;
-	font-weight: bold;
-}
 
 .container {
     display: flex;
@@ -127,13 +8,7 @@ nav ul li a:hover {
 }
 
 
-.activities-sidebarj {
-    width: 25%;
-    padding: 15px;
-    border-radius: 8px;
-	  overflow-y: auto;
-	    max-height: 500px;
-}
+
 
 #activities-container {
     display: flex;
@@ -142,110 +17,7 @@ nav ul li a:hover {
     justify-content: center; 
 }
 
-/* تصميم الكارد */
-.activity-card {
-	 display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(22.33% - 15px); 
-    min-width: 250px; 
-    background: white;
-    border: 2px solid  white;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-	  margin-bottom: 10px;
-	   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-
-
-
-
-.activity-card-img {
-    width: 85%;
-    max-height: 150px; 
-    object-fit: cover; 
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px; 
-}
-.activity-image-large {
-    width: 85%; 
-    max-height: 150px; 
-    object-fit: cover; 
-    display: block;
-    margin: 10px auto; 
-    border-radius: 10px; 
-}
-
-.activity-details {
-    width: 70%;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-.view-details-button:hover {
-    background-color:darkseagreen;
-}
-
-.info-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.info {
-    background: #E67E22;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-	 min-width: 150px;
-	  flex: 1;
-	  margin: 5px;
-}
-.view-button, .join-button {
-background: #E67E22;
-text-decoration: none;
-color: white; 
-border-radius: 10px;
- border-color: #FF6B6B;
- padding: 10px; 
- cursor: pointer;
-}
-
-.join-button {
-   display: flex;
-    justify-content: center;
-	  color: white;
-    background: #E67E22;
-    border: none;
-    cursor: pointer;
-	 margin-top:20px;
-	    width: 100%;
-		align-items: center;
-    padding: 20px;
-    border-radius: 80px;
-	
-}
-
-.schedule {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.schedule th, .schedule td {
-    border: 1px solid #E67E22;
-    padding: 10px;
-    text-align: center;
-}
-
-.schedule th {
-    background:  #E67E22;
-    color: white;
-}
 
 
 
@@ -255,7 +27,7 @@ border-radius: 10px;
     width: 400px;
     height: 500px;/*تعديل على الحجم*/
     overflow: hidden;
-    background-color: white;
+    background-color: #FFE6F0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 15px;
@@ -284,16 +56,3 @@ border-radius: 10px;
     object-fit: cover;
 }
 
-.view-detailsh {
-    display: inline-block;
-    margin-top: 10px;
-    background-color:  #E67E22;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.view-detailsh:hover {
-    background-color:  #E67E22;
-}
