@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="All.css">
 </head>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const moreBtn = document.getElementById("showMoreBtn");
+    moreBtn.addEventListener("click", function () {
+      const hiddenItems = document.querySelectorAll(".hidden-child");
+      hiddenItems.forEach(item => {
+        item.style.display = "block";
+      });
+      this.style.display = "none"; 
+    });
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".show-more-kids");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const list = btn.previousElementSibling; // the <ul>
+        const hiddenKids = list.querySelectorAll(".hidden-kid");
+        hiddenKids.forEach(kid => {
+          kid.style.display = "list-item";
+        });
+        btn.style.display = "none";
+      });
+    });
+  });
+</script> 
 <body>
 
     <!-- Top Navigation -->
@@ -77,7 +104,7 @@
                     </ul>
                 </li>
 				
-				 <li>
+				 <li  class="hidden-child" style="display: none;">
                     <strong>Mohammed Saad (Age: 11)</strong>
                     <ul>
                         <li>Basketball</li>
@@ -86,7 +113,7 @@
                     </ul>
                 </li>
 				
-                <li>
+                <li  class="hidden-child" style="display: none;">
                     <strong>Reema (Age: 11)</strong>
                     <ul>
 	                   <li>Volleyball</li>
@@ -94,7 +121,7 @@
                         <li>Tennis</li>
                     </ul>
                 </li>
-                <li>
+                <li  class="hidden-child" style="display: none;">
                     <strong>Afnan(Age: 13)</strong>
                     <ul>
                         <li>Tennis</li>
@@ -103,7 +130,7 @@
                     </ul>
                 </li>
 				
-				<li>
+				<li  class="hidden-child" style="display: none;">
                     <strong>Omar Khaled (Age: 14)</strong>
                     <ul>
                         <li>Basketball</li>
@@ -111,7 +138,7 @@
                     </ul>
                 </li>
 				
-				 <li>
+				 <li  class="hidden-child" style="display: none;">
                     <strong>Layla Hassan(Age: 10)</strong>
                     <ul>
                         <li>Basketball</li>
@@ -120,7 +147,7 @@
                     </ul>
                 </li>
 				
-				<li>
+				<li  class="hidden-child" style="display: none;">
                     <strong>Ruba (Age: 12)</strong>
                     <ul>
                         <li>Soccer</li>
@@ -130,6 +157,7 @@
                 <li>
 				
             </ul>
+			    <button id="showMoreBtn">More</button>
         </div>
     </section>
 
@@ -234,10 +262,11 @@
                             <li>Rana</li>
                             <li>Omar Khaled</li>
                             <li>Afnan</li>
-                            <li>Layla Hassan</li>
-                            <li>Mohammed Saad</li>
-                            <li>Omar Khaled</li>
+                            <li class="hidden-kid" style="display: none;">Layla Hassan</li>
+                            <li class="hidden-kid" style="display: none;">Mohammed Saad</li>
+                            <li class="hidden-kid" style="display: none;">Omar Khaled</li>
                         </ul>
+						 <button class="show-more-kids">More</button>
                     </div>
                 </dd>
             </dl>
@@ -254,13 +283,14 @@
                             <li>Razan </li>
                             <li>Sana</li>
                             <li>Layla Hassan</li>
-                            <li>Mohammed Saad</li>
-                            <li>Reema </li>
-							 <li>Afnan</li>
-                            <li>Omar Khaled</li>
-							 <li>Ruba</li>
-                            <li>Layla Hassan</li>
+                            <li class="hidden-kid" style="display: none;">Mohammed Saad</li>
+                            <li class="hidden-kid" style="display: none;">Reema </li>
+							 <li class="hidden-kid" style="display: none;">Afnan</li>
+                            <li class="hidden-kid" style="display: none;">Omar Khaled</li>
+							 <li class="hidden-kid" style="display: none;">Ruba</li>
+                            <li class="hidden-kid" style="display: none;">Layla Hassan</li>
                         </ul>
+						 <button class="show-more-kids">More</button>
                     </div>
                 </dd>
             </dl>
@@ -295,9 +325,10 @@
                             <li>Ruba</li>
                             <li>Reema</li>
                             <li>Razan</li>
-                            <li>Arwa</li>
-                            <li>Sana</li>							
+                            <li class="hidden-kid" style="display: none;">Arwa</li>
+                            <li class="hidden-kid" style="display: none;">Sana</li>							
                         </ul>
+						 <button class="show-more-kids">More</button>
                     </div>
                 </dd>
             </dl>
@@ -315,11 +346,12 @@
                             <li>Arwa</li>
                             <li>Rana</li>
                             <li>Mohammed Saad</li>
-                            <li>Saad Ali</li>
-							 <li>Reema</li>
-                            <li>Othman Tariq</li>
-							  <li>Fahad Majed</li>                          
+                            <li class="hidden-kid" style="display: none;">Saad Ali</li>
+							 <li class="hidden-kid" style="display: none;">Reema</li>
+                            <li class="hidden-kid" style="display: none;">Othman Tariq</li>
+							  <li class="hidden-kid" style="display: none;">Fahad Majed</li>                          
                         </ul>
+						 <button class="show-more-kids">More</button>
                     </div>
                 </dd>
             </dl>
