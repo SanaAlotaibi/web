@@ -239,3 +239,91 @@ input[type="file"]
  #feedback {
     resize: none;
 }
+/*الاضافه الجديده3*/
+.activity-enroll {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        .activity-enroll label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .activity-enroll select, .activity-enroll button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        #enrollResult {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0ffe1;
+            border: 1px solid #8bc34a;
+            border-radius: 5px;
+        }
+		/* تخطيط شبكة الأنشطة */
+.activitiesparents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* كرت النشاط */
+.activityparents {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تأثير عند المرور على النشاط */
+.activityparents:hover {
+    transform: scale(1.03);
+}
+
+/* صور الأنشطة */
+.activityparents img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* معلومات النشاط */
+.activityparents-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* المربع الخاص بالاختيار */
+.activityparents input[type="checkbox"] {
+    margin-top: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* زر التسجيل */
+#enroll-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#enroll-btn:hover {
+    background-color: #45a049;
+}
