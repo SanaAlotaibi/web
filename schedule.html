@@ -9,25 +9,45 @@
 </head>
 <body>
     <header>
-        <a href="HomePage"><img src="images/logo.png" alt="company logo" ></a>
+        <a href="HomePage" accesskey="h"><img src="images/logo.png" alt="company logo"></a>
        
         <nav>
             <ul>
-                <li><a href="HomePage.html">Home</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="coaches.html">Coaches</a></li>
-                <li><a href="Parents-Dashboard.html">Parents</a></li>
-                <li><a href="Admin.html">Administrator</a></li>
+                <li><a href="HomePage.html" accesskey="h">Home</a></li>
+                <li><a href="activities.html" accesskey="a">Activities</a></li>
+                <li><a href="coaches.html" accesskey="c">Coaches</a></li>
+                <li><a href="Parents-Dashboard.html" accesskey="p">Parents</a></li>
+                <li><a href="Admin.html" accesskey="d">Administrator</a></li>
             </ul>
         </nav>
     </header>
     <nav class="breadcrumbs">
-        <p> <a href="HomePage.html">Home</a> > <a href="coaches.html">Coaches</a> > Coach Schedule </p>
-     </nav>
+        <p><a href="HomePage.html" accesskey="b">Home</a> > <a href="coaches.html"accesskey="c">Coaches</a> > Coach Schedule</p>
+    </nav>
     <main class="schedule">
-        <a href="coaches.html" class="back-arrow">←</a>
+        <a href="coaches.html" class="back-arrow" accesskey="k">←</a>
+        
+        <script>
+            
+            function formatDate(date) {
+                const options = { weekday: 'long', month: 'long', day: 'numeric' };
+                return date.toLocaleDateString('en-US', options);
+            }
+            
+            
+            const today = new Date();
+            
+           
+            const startOfWeek = new Date(today);
+            startOfWeek.setDate(today.getDate() - today.getDay());
+            
+            
+            document.write('<h2 style="background-color:#e9cc9d8a;color:black;text-align:center;">Week of ' + formatDate(startOfWeek) + '</h2>');
+        </script>
+        
         <h2>Coach Name Schedule</h2>
         <table class="T1">
+           
             <thead>
                 <tr>
                     <th>Time</th>
@@ -43,10 +63,10 @@
             <tbody>
                 <tr>
                     <td>3:00 PM - 4:00 PM</td>
-                    <td class="booked" rowspan="3">Basket ball 14-16yr </td>
+                    <td class="booked" rowspan="3">Basket ball 14-16yr</td>
                     <td class="Off-day"></td>
                     <td></td>
-                    <td class="booked" colspan="2">Basket ball 8-9yr </td>
+                    <td class="booked" colspan="2">Basket ball 8-9yr</td>
                     <td class="Off-day"></td>
                     <td></td>
                 </tr>
@@ -63,7 +83,7 @@
                     <td>5:00 PM - 6:00 PM</td>
                     <td class="Off-day"></td>
                     <td></td>
-                    <td class="booked" colspan="2"> Basket ball 10-13yr </td>
+                    <td class="booked" colspan="2">Basket ball 10-13yr</td>
                     <td class="Off-day"></td>
                     <td class="booked" rowspan="2">Basket ball 10-13yr</td>
                 </tr>
@@ -71,11 +91,10 @@
                     <td>6:00 PM - 7:00 PM</td>
                     <td></td>
                     <td class="Off-day"></td>
-                    <td class="booked" rowspan="2">Basket ball 14-16yr </td>
+                    <td class="booked" rowspan="2">Basket ball 14-16yr</td>
                     <td></td>
                     <td></td>
                     <td class="Off-day"></td>
-                   
                 </tr>
                 <tr>
                     <td>7:00 PM - 8:00 PM</td>
@@ -88,20 +107,19 @@
                 </tr>
             </tbody>
         </table>
-        
     </main>
 
     <footer>
         <div class="vision">
             <img src="images/logo.png" alt="logo">
             <p>OUR VISION</p>
-            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to  promoting personal growth, camaraderie, and a healthy, active lifestyle..</p>
+            <p>Our VisionAt KoraKids, we believe in the power of ball sports to inspire, educate, and bring joy to children. Our vision is to create a nurturing environment where kids can develop their skills, build confidence, and learn the value of teamwork through engaging and dynamic sports experiences. We are committed to promoting personal growth, camaraderie, and a healthy, active lifestyle.</p>
         </div>
         <p>Copyright &copy; 2024 Website. All rights reserved.</p>
         <div class="social-icons">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/xpng.jpg" alt="X"></a>
+            <a href="#" accesskey="f"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#" accesskey="i"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#" accesskey="t"><img src="images/xpng.jpg" alt="X"></a>
         </div>
     </footer>
 </body>
