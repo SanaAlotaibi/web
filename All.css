@@ -203,3 +203,17 @@ input:focus, textarea:focus {
   border-color: #8a6bbd;
   box-shadow: 0 0 8px rgba(138, 107, 189, 0.5);
 }
+/* ===== Force white text in dark mode ===== */
+.dark-theme,
+.dark-theme *:not(button):not(input):not(textarea):not(a) {
+  color: #ffffff !important; /* Pure white for readability */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Exceptions (interactive elements keep theme colors) */
+.dark-theme a,
+.dark-theme button,
+.dark-theme input,
+.dark-theme textarea {
+  color: inherit !important; /* Respect original dark-theme colors */
+}
