@@ -18,111 +18,136 @@
             <a href="parents-Dashboard.html" class="back-btnparents">←</a>
             <h2>Enroll In Activities</h2>
         </div>
-        <form id="enroll-form">
-            <!-- اختيار الطفل -->
-            <div class="form-group">
-                <label for="kid-select">Select Kid</label>
-                <select id="kid-select">
-                    <option value="" disabled selected>Choose a kid</option>
-                    <option value="Badr">Badr</option>
-                    <option value="Fahad">Fahad</option>
-                    <option value="Farah">Farah</option>       
-					<option value="Lana">Lana</option>
-                </select>
-            </div>
-			
-            <!-- الفلاتر -->
-            <div class="form-group filters">
-                
-		   <label for="filter-select" id="filter-label">Filter by:</label>
-            <select id="filter-select">
-                <optgroup label="By Coach">
-                    <option value="Mona">Coach Mona</option>
-                    <option value="Kamal">Coach Kamal</option>
-					<option value="latifah">Coach latifah</option>
-					<option value="Omar">Coach Omar</option>  
-					<option value="Nasreen">Coach Nasreen</option>
+       	 <section class="activity-enroll">
+        <h2>Enroll in an Activity</h2>
+        <form id="enrollForm">
+            <label for="kidSelect">Select Kid:</label>
+            <select id="kidSelect" accesskey="sk"><option value="">-- Select --</option></select>
 
+            <label for="coachFilter">Filter by Coach:</label>
+            <select id="coachFilter" accesskey="fc"><option value="">-- Select --</option></select>
 
-                </optgroup>
-                <optgroup label="By Objective">
-                    <option value="fitness">Fitness</option>
-                    <option value="teamwork">Teamwork</option>
-                </optgroup>
-                <optgroup label="By Prerequisites">
-                    <option value="beginner">Beginner Level</option>
-                    <option value="advanced">Advanced Level</option>
-                </optgroup>
-            </select>
-            </div>
+            <label for="prerequisiteFilter">Filter by Prerequisite:</label>
+            <select id="prerequisiteFilter" accesskey="p"><option value="">-- Select --</option></select>
+
+            <label for="activitySelect">Select Activity:</label>
+            <select id="activitySelect" accesskey="sa"><option value="">-- Select --</option></select>
+
+            <button type="submit" id="enroll-btn"accesskey="e">Submit</button>
+        </form>
+
+        <div id="enrollResult"></div>
+    </section>
           
-			<!-- قائمة الأنشطة -->
-			<label id="activitiesparents">Select Activities:</label>
-            <div class="activitiesparents-grid">
-                <div class="activityparents">
-                    <img src="images/Basketball-balls.png" alt="basketball Image">
-                    <div class="activityparents-info">
-                        <p><strong>basketball</strong></p>
-                        <p>Coach: Mona </p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                
-				<div class="activityparents">
-                    <img src="images/Basketball-balls.png" alt="basketball Image">
-                    <div class="activityparents-info">
-                        <p><strong>basketball</strong></p>
-                        <p>Coach: Latifah </p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="activityparents">
-                    <img src="images/Tennis.png" alt="Tennis Image">
-                    <div class="activityparents-info">
-                        <p><strong>Tennis</strong></p>
-                        <p>Coach: Omar</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-				<div class="activityparents">
-                    <img src="images/golf.png" alt="golf Image">
-                    <div class="activityparents-info">
-                        <p><strong>golf</strong></p>
-                        <p>Coach: Omar</p>
-                </div>
-                    <input type="checkbox">
-                </div>
-				<div class="activityparents">
-                    <img src="images/Volleyball.png" alt="Volleyball Image">
-                    <div class="activityparents-info">
-                        <p><strong>Volleyball</strong></p>
-                        <p>Coach: Nasreen</p>
-                </div>
-                    <input type="checkbox">
-			    </div>
-			    <div class="activityparents">
-                    <img src="images/Baseball.png" alt="Baseball Image">
-                    <div class="activityparents-info">
-                        <p><strong>Baseball</strong></p>
-                        <p>Coach: Nasreen</p>
-                </div>
-                    <input type="checkbox">
-                </div>
-				<div class="activityparents">
-                    <img src="images/Soccer-pattern.png" alt="Soccer Image">
-                    <div class="activityparents-info">
-                        <p><strong>Soccer</strong></p>
-                        <p>Coach: Kamal</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-            </div>				
-            <button type="submit" id="enroll-btn">Enroll</button>
+			
         </form>
     </div>
+
 	</main>
+		<script>
+
+localStorage.setItem("kids", JSON.stringify(["Badr", "Lana", "Fahd"]));
+
+const kids = JSON.parse(localStorage.getItem("kids")) || [];
+
+const activities = [
+    { name: "Football", coach: "John Doe", prerequisite: null },
+    { name: "Basketball", coach: "Mona", prerequisite: null },
+    { name: "Tennis", coach: "Omar", prerequisite: "Basic Racket Skills" },
+    { name: "Volleyball", coach: "Fatima", prerequisite: "Teamwork" },
+    { name: "Golf", coach: "Ali", prerequisite:  "Precision"},
+    { name: "Padel", coach: "Sara", prerequisite: "Reflexes" },
+{ name: "Baseball", coach: "Ali", prerequisite: "Focus" }
+];
+
+window.onload = function () {
+    const kidSelect = document.getElementById("kidSelect");
+    const coachFilter = document.getElementById("coachFilter");
+    const prereqFilter = document.getElementById("prerequisiteFilter");
+    const activitySelect = document.getElementById("activitySelect");
+    const form = document.getElementById("enrollForm");
+    const result = document.getElementById("enrollResult");
+
+    // تعبئة قائمة الأطفال
+    kids.forEach(kid => {
+        let opt = document.createElement("option");
+        opt.value = opt.textContent = kid;
+        kidSelect.appendChild(opt);
+    });
+
+    // تعبئة المدربين بدون تكرار
+    let uniqueCoaches = [...new Set(activities.map(a => a.coach))];
+    uniqueCoaches.forEach(coach => {
+        let opt = document.createElement("option");
+        opt.value = opt.textContent = coach;
+        coachFilter.appendChild(opt);
+    });
+
+    // تعبئة المتطلبات بدون تكرار
+    let uniquePrereqs = [...new Set(activities.map(a => a.prerequisite).filter(p => p))];
+    uniquePrereqs.forEach(pr => {
+        let opt = document.createElement("option");
+        opt.value = opt.textContent = pr;
+        prereqFilter.appendChild(opt);
+    });
+
+    // عند اختيار مدرب
+    coachFilter.addEventListener("change", function () {
+        activitySelect.innerHTML = '<option value="">-- Select --</option>';
+        activities
+            .filter(a => a.coach === this.value)
+            .forEach(a => {
+                let opt = document.createElement("option");
+                opt.value = opt.textContent = a.name;
+                activitySelect.appendChild(opt);
+            });
+    });
+
+    // عند اختيار متطلب
+    prereqFilter.addEventListener("change", function () {
+        activitySelect.innerHTML = '<option value="">-- Select --</option>';
+        activities
+            .filter(a => a.prerequisite === this.value)
+            .forEach(a => {
+                let opt = document.createElement("option");
+                opt.value = opt.textContent = a.name;
+                activitySelect.appendChild(opt);
+            });
+    });
+
+    // التحقق عند الضغط Submit
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const kid = kidSelect.value;
+        const activityName = activitySelect.value;
+        if (!kid || !activityName) {
+            alert(
+                !kid && !activityName
+                    ? "Please select a kid and an activity."
+                    : !kid
+                    ? "Please select a kid."
+                    : "Please select an activity."
+            );
+            return;
+        }
+
+        result.innerHTML = "";
+
+        const activity = activities.find(a => a.name === activityName);
+
+        const info = document.createElement("div");
+        info.innerHTML = `
+            <h3>Enrollment Info</h3>
+            <p><strong>Kid:</strong> ${kid}</p>
+            <p><strong>Activity:</strong> ${activity.name}</p>
+            <p><strong>Coach:</strong> ${activity.coach}</p>`;
+        result.appendChild(info);
+
+        form.reset();
+        activitySelect.innerHTML = '<option value="">-- Select --</option>';
+    });
+};
+</script>
 	 <footer>
         <div class="vision">
             <img src="images/logo.png" alt="Vision">
@@ -136,6 +161,6 @@
             <a href="#"><img src="images/xpng.jpg" alt="x"></a>
         </div>
     </footer>
-	
+	<script src="enroll.js"></script>
 </body>
 </html>
