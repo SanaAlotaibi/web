@@ -18,7 +18,7 @@ th, td {
 }
 
 .booked {
-    background: #e8aa54;
+    background:#D6F1FF;
 }
 .Off-day{
     background: #ccc;
@@ -47,7 +47,7 @@ th, td {
     margin-bottom: 20px;
 }
 .coach:hover{
-background-color:#f7e8ce;
+background-color:#FFE6F0;
 }
 .coach p {
     font-size: 18px;
@@ -90,14 +90,20 @@ background-color:#f7e8ce;
 .ButtonCF {
     display: flex;
     justify-self: end;
-    background-color:#E67E22;
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
-    border-color: #E67E22;
-    padding: 10px;
-    cursor: pointer;
-}
+   
+        background-color: #E8E3F9; 
+        color: #4A4A4A; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        cursor: pointer; 
+        font-weight: bold;
+        border: none;
+    } 
+     
+    .Button:hover { 
+        background-color: #D6F1FF; 
+    } 
+
 
 /*^coach info page styles*/
 .coaches-page {
@@ -120,7 +126,7 @@ background-color:#f7e8ce;
 }
 .coach-card  a {
     text-decoration: none;
-    color: inherit; 
+    color: black; 
     display: block; 
 }
 
@@ -130,7 +136,7 @@ background-color:#f7e8ce;
     border-radius: 30px;
 }
 .coach-card:hover{
-    background: #f7e8ce;
+    background: #FFE6F0;
     border-radius: 15px;
 }
 
